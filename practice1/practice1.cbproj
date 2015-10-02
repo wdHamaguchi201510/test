@@ -19,9 +19,12 @@
 			<Base>true</Base>
 		</PropertyGroup>
 		<PropertyGroup Condition="'$(Base)'!=''">
+			<LinkPackageImports>rtl.bpi;vcl.bpi;Corepo2010.bpi</LinkPackageImports>
+			<BCC_IncludePath>C:\Program Files (x86)\COREPO2010\CRP13VCL2009;$(BCC_IncludePath)</BCC_IncludePath>
+			<OutputExt>exe</OutputExt>
 			<PackageImports>vclx.bpi;vcl.bpi;vclimg.bpi;dbrtl.bpi;Rave77VCL.bpi;bdertl.bpi;rtl.bpi;bcbie.bpi;vclactnband.bpi;xmlrtl.bpi;bcbsmp.bpi;vcldb.bpi;vcldbx.bpi;vcltouch.bpi;dsnap.bpi;dsnapcon.bpi;TeeUI.bpi;TeeDB.bpi;Tee.bpi;vclib.bpi;ibxpress.bpi;adortl.bpi;IndyCore.bpi;IndySystem.bpi;IndyProtocols.bpi;inet.bpi;intrawebdb_100_140.bpi;Intraweb_100_140.bpi;vclie.bpi;inetdb.bpi;webdsnap.bpi;websnap.bpi;inetdbbde.bpi;inetdbxpress.bpi;soaprtl.bpi;vclribbon.bpi;DbxCommonDriver.bpi;DbxClientDriver.bpi;DBXInterBaseDriver.bpi;DBXMySQLDriver.bpi;dbexpress.bpi;dbxcds.bpi;Corepo2010.bpi</PackageImports>
 			<Multithreaded>true</Multithreaded>
-			<AllPackageLibs>rtl.lib;vcl.lib</AllPackageLibs>
+			<AllPackageLibs>rtl.lib;vcl.lib;Corepo2010.lib</AllPackageLibs>
 			<ProjectType>CppVCLApplication</ProjectType>
 			<DCC_CBuilderOutput>JPHNE</DCC_CBuilderOutput>
 			<DynamicRTL>true</DynamicRTL>
@@ -60,17 +63,16 @@
 			<ILINK_TranslatedLibraryPath>$(BDS)\lib\$(LANGDIR)\release;$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
 		</PropertyGroup>
 		<ItemGroup>
-			<CppCompile Include="practice1.cpp">
-				<BuildOrder>0</BuildOrder>
-			</CppCompile>
-			<ResFiles Include="practice1.res">
-				<ModuleName>practice1.res</ModuleName>
-				<BuildOrder>1</BuildOrder>
-			</ResFiles>
 			<CppCompile Include="Unit1.cpp">
 				<Form>Form1</Form>
 				<DependentOn>Unit1.h</DependentOn>
 				<BuildOrder>2</BuildOrder>
+			</CppCompile>
+			<ResFiles Include="practice1.res">
+				<BuildOrder>1</BuildOrder>
+			</ResFiles>
+			<CppCompile Include="practice1.cpp">
+				<BuildOrder>0</BuildOrder>
 			</CppCompile>
 			<FormResources Include="Unit1.dfm"/>
 			<BuildConfiguration Include="Base">
